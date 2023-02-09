@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--구글 링크를 통해 폰트를 적용함-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">        
+        <!--구글 링크를 통해 폰트를 적용함-->
+        <title>
+            문준호의 코딩 공부 사이트 - WEB
+        </title>
+        <meta charset="utf-8">
+        <style>
+            h1{
+                color:rgba(28, 13, 147, 0.812);font-size:60px;font-family: 'Jua', sans-serif;text-align:center;
+            }
+            h2{
+                color:black;font-size:40px;font-family: 'Noto Sans KR', sans-serif;
+            }
+            p{
+                font-family: 'Noto Sans KR', sans-serif;font-size:15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="index.html" style="text-decoration:underline">
+            홈으로 돌아가기
+        </a>
+        <h1>
+            html
+        </h1>
+        <p>
+            웹의 결과를 웹페이지라 하고 웹페이지가 모인 것을 웹사이트라고 한다. 이건 나도 몰랐었음.
+            이 웹페이지를 만드는 코드를 html이라고 한다.
+        </p>
+        <p class="default">
+            <h2>
+                html의 문법
+            </h2>
+            html의 문법은 간단하다.
+            태그라는 명령어만을 사용하여. 기본 텍스트는 그대로 출력되고 명령어를 사용하려면 <태그>의 양식으로 입력하면된다.
+            단독으로 <태그>만 입력하여 적용되는 명령어도 있으나 대부분은 <여는 태그 + 속성> + 내용 + <닫는 태그>의 양식으로 입력하기만 하면 된다.
+            <br>
+            속성(attribute)는 <태그 attribute="value"> 순서로 입력하면 된다. <태그 attribute='value'>도 가능. CSS와 함께 적용하기 위해서 <태그 attribute="property:value">로 쓰는 것도 가능.
+        </p>
+        <p>
+            <h2>
+                html의 작성양식
+            </h2>
+            <pre>
+                &lt;!doctype&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="utf-8"&gt;
+                    &lt;body&gt;
+                    &lt;!body\&gt;
+                &lt;!html&gt;
+            </pre>
+            이것이 기본적으로 협의된 html의 작성 양식이다.
+        </p>
+        <p>
+            <h2>
+                html과 웹 서버 연결하기
+            </h2>
+            html로 웹페이지를 만들었으면 다른 사용자들과 공유하여 웹페이지를 방문할 수 있게 하고 싶을 것이다. html이 다른 사용자가 볼 수 있게 하는 방법은 두가지가 있다.
+            <br>
+            1. visual studio code의 애드온을 사용하여 go live로 내 컴퓨터가 직접 웹 서버가 되기
+            <br>
+            2. github 등의 무료 웹서버 대행 업체를 통해 외부에 웹서버를 만들기
+            <br>
+            직접 웹서버를 운용하는 심화과정을 나중에 한번 배워보고 싶다.
+        </p>
+        <p>
+            <h2>
+                서버와 클라이언트
+            </h2>
+            내컴퓨터의 ip주소는 : 127.0.00.001 ? 로 협약이 되어있다.
+            아마 웹페이지를 열면 주소는 내 컴퓨터에 있는 내 파일에 주소로 되어있을 것이다. 이를 인터넷과 연결시켜... ip주소로 웹페이지를 연결하는 방법도 있고..(localhost 사용)
+        </p>
+        <p>  
+            html은 매우 간단하면서도 html만 쓰기에는 한계가 있기 때문에 더 복잡하고 고급의 웹페이지를 구성하기 위해서는 css,javascript등과 함께 사용한다.
+            태그 중에는 부모 자식간의 관계성을 가지는 경우도 있다. (&lt;ul&gt;&lt;ol&gt;&lt;/ol&gt;&lt;/ul&gt;)이런 식으로..
+            &lt;img&gt;를 통해서 source는 인터넷에 있는 이미지를 불러올수도 있고 내 컴퓨터에 있는 파일을 불러 올 수 있음.
+
+            이건 ppt자료 얘기 지만 unsplash.com 통해서 자유롭게 이미지를 구할 수 있음
+
+            attribute는 태그의 속성을 나타냄 (문법이라 볼 수 있음)
+
+            height width attribute는 이미지의 크기를 픽셀단위로 결정할 수 있음. 100%, 50% 등의 퍼센트를 사용하여 이미지의 크기 결정도 가능함.
+
+            ul과 li는 부모 자식 관계 코드인데 들여쓰기가 됨 코드상에서는 tab키를 눌러 들여쓰기 가능
+
+            ol을 통해서 목록에 숫자를 넣을 수 있음
+
+            ul : unordered list  / ol : ordered list
+
+            table(표) 작성시에는 3대가 부모 자식 코드가 함께 따라옴
+
+            본문은 body, 본문을 설명하는 태그는 head. 이 고위직 태그들을 감싸는 최고위측 태그를 html. 그리고 그 위에 관용적으로 이 웹사이트는 html이다를 표현하는  &lt;!doctype html &gt;
+
+            깨달은 것 : 검색엔진이 웹페이지를 분석할때는 title 등의 태그를 통해 분석하는것... 조금씩 이해가 되는 것 같다.
+
+            Meta Tag 를 쓰기전에 한글을 써도 깨지지 않는 이유는 요즘 웹브라우저는 안써도 깨지지 않게 만들어진것. 익스플로러로 들어가면 깨질수도있음.
+
+            &lt;a&gt; , &lt;href&gt; , 새창에서 열고싶으면 target="_blank"
+
+            내 웹페이지를 인터넷에 연결시키기 위해서는 웹호스팅 / 자신의 컴퓨터에 웹서버를 직접 설치하기 이 두가지 방법이 있다
+
+            &lt;iframe&gt;
+
+            보통 댓글은 다른 회사의 댓글 기능을 html로 끌어와서 사용 가능 (DISQUS 등등)
+
+            문의 채팅은 tawk로 가능
+
+            google analystic을 통해 방문자 분석 가능
+            
+            &lt;!--<br>
+            --&gt;로 주석을 표현가능하다.    
+
+            텍스트로 '&lt;' 와 '&gt;' 를 표현하고 싶으면 각각 &#38;lt;,&#38;gt;를 사용하면 된다. (특수문자, 기호 표시 참조)
+        </p>
+        <h2>
+            서버와 클라이언트
+        </h2>
+        <p>
+            div 태그는 아무 의미도 없는 무색 무취의 디자인만을 위한 태그 - block element기 때문에 화면 전체를 씀
+            span 태그 또한 디자인을 위한 태그 - inline element
+        </p>
+        <p>
+            궁금한 것 : 근데 왜 p에다가 스타일을 부여했는데 그 p에 후행하는 h1등의 태그를 달면 p에 걸린 style이 무시되는 것일까?(폰트 적용을 하다가 잘 안되어서 시행착오를 겪음.) 일단 pre의 자식태그로 p를 묶어서 표현하면 조금 해결되지 않을까 싶다. 아직 시도해보진 않았음
+        </p>
+        <p>
+            <li>
+                <a href="web.html">
+                    html
+                </a>
+            </li>
+            <li>
+                <a href="database.html">
+                    CSS
+                </a>
+            </li>
+            <li>
+                <a href="server.html">
+                    javascript
+                </a>
+            </li>
+    </body>
+</html>
